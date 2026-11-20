@@ -1,7 +1,7 @@
 {
-  "name": "TS SI Prelims Countdown",
-  "short_name": "TS SI Prep",
-  "description": "7-day plan, step-by-step models with shortcuts, topic tests and a 200-question CBT Grand Mock for the TS Police SI/PC Prelims.",
+  "name": "SI & PC Prelims Prep",
+  "short_name": "SI PC Prep",
+  "description": "Practice app for Telangana police SI and PC Prelims: 7-day plan, shortcut methods, fresh questions every test and a 200-question CBT mock. Not an official app.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

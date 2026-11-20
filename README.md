@@ -1,18 +1,15 @@
-# TS SI Prelims Countdown
+# SI & PC Prelims Prep
 
-A study app for the Telangana Police SI / PC Preliminary Written Test (29 Nov 2026):
+Free practice app for candidates preparing for the Telangana police recruitment Preliminary Written Tests — SI (Civil) & equivalent and Police Constable (Civil) & equivalent.
 
-- Day cards from 7 days to go down to exam day
-- Arithmetic and Reasoning: 120 question models, each with an exam shortcut, a worked example and a practice question
-- 8-question test for every topic, with explanations for every option
-- 200-question Grand Mock in CBT style: 3-hour timer, +1 / −0.20 marking, section-wise result
+**Not an official app.** Not affiliated with TGPRB/TSLPRB, Telangana Police or the Government of Telangana. Official information: https://www.tgprb.in
 
-## Use it as an app
-Open **https://venukumar405.github.io/Final-TG-SI-Prep/** on your phone:
-- **Android (Chrome):** tap ⋮ → *Install app* / *Add to Home screen*, or tap the **Install app** button on the page.
-- **iPhone (Safari):** tap Share → *Add to Home Screen*.
+- 7-day plan that fits the exam date you choose (SI 29 Nov 2026, PC 20 Dec 2026, or your own date)
+- 120 Arithmetic and Reasoning question models, each with an exam shortcut and worked example
+- Fresh questions every time: Arithmetic and Reasoning questions are generated with new numbers; General Studies questions you have seen least come first
+- 8-question tests for 33 topics with an explanation for every option
+- 200-question Grand Mock in computer-based-test style (+1 / −0.20, 3 hours, auto-submit)
 
-After the first visit it works offline. Progress is saved on each device separately.
+Open: https://venukumar405.github.io/Final-TG-SI-Prep/ — Android: tap **Install app**; iPhone: Share → Add to Home Screen. Works offline after the first visit.
 
-## Update
-Replace `index.html` with a new version and commit. Open the app once with internet to pick up the change.
+Privacy: no account, no ads, no analytics; progress stays on your device. See privacy.html.
