@@ -168,6 +168,12 @@ table.kv td:first-child{font-weight:600;color:var(--navy);white-space:nowrap;wid
 .cbt-actions{border-top:1px solid var(--line);padding:10px 16px;display:flex;gap:8px;flex-wrap:wrap;background:var(--soft)}
 .cbt-actions .sp{flex:1}
 .cbt-side{border-left:1px solid var(--line);background:#f7f9fc;display:flex;flex-direction:column;min-height:0}
+.sideclose{display:none;margin:8px 10px 0}
+@media(max-width:860px){.sideclose{display:block}}
+@media(max-width:860px){.cbt-side{display:none}.cbt-side.show{display:flex;position:fixed;right:0;top:0;bottom:0;width:min(330px,92vw);z-index:30;box-shadow:-4px 0 20px rgba(0,0,0,.2);overflow:auto}
+  .cbt-top{gap:8px;padding:6px 10px}.cbt-top .ttl{font-size:15px}.cbt-top .small{display:none}.timer{font-size:16px;padding:3px 8px}
+  .cbt-sections{padding:6px 10px;gap:4px}.cbt-sections button{padding:4px 8px;font-size:12.5px}
+  .cbt-main{padding:10px 12px}.cbt-actions{padding:8px 10px;gap:6px}.cbt-actions .btn{padding:7px 10px;font-size:13.5px}}
 .cand{display:flex;gap:10px;align-items:center;padding:12px;border-bottom:1px solid var(--line)}
 .avatar{width:42px;height:42px;border-radius:6px;background:var(--line);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--navy)}
 .legend{display:grid;grid-template-columns:1fr 1fr;gap:6px 8px;padding:10px 12px;font-size:12.5px;border-bottom:1px solid var(--line)}
@@ -1199,7 +1205,7 @@ function runCBT(){
     <div class="cbt-sections" id="secs"></div>
     <div class="cbt-body">
       <div class="cbt-main" id="qarea"></div>
-      <aside class="cbt-side" id="side">
+      <aside class="cbt-side" id="side"><button type="button" class="btn sideclose" id="sideclose">✕ Close palette</button>
         <div class="cand"><div class="avatar">${S.exam.k === "pc" ? "PC" : "SI"}</div><div><b>Candidate</b><div class="small muted">${esc(examName())} · Mock</div></div></div>
         <div class="legend" id="legend"></div>
         <div class="pal" id="pal"></div>
@@ -1214,7 +1220,7 @@ function runCBT(){
       <button type="button" class="btn green" id="snx">Save &amp; Next</button>
     </div></div>`;
   const mq = matchMedia("(max-width:860px)");
-  const pb = $("#palbtn"); pb.style.display = mq.matches ? "" : "none"; pb.onclick = () => $("#side").classList.toggle("show");
+  $("#sideclose").onclick = () => $("#side").classList.remove("show"); const pb = $("#palbtn"); pb.style.display = mq.matches ? "" : "none"; pb.onclick = () => $("#side").classList.toggle("show");
   function status(idx){ const id = MQ()[idx]; const a = m.ans[id] !== undefined, mk = !!m.mark[id], v = !!m.visit[id];
     return a && mk ? "am" : mk ? "mr" : a ? "an" : v ? "na" : "nv"; }
   function secOf(idx){ return SECS.findIndex(s => idx >= s[1] && idx < s[2]); }
